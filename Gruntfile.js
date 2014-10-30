@@ -203,7 +203,7 @@ module.exports = function (grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('release', 'Generate files, runs tests, build to dist and copy files to gh-pages-branc', [
+  grunt.registerTask('release', 'Generate files, runs tests, build to dist and copy files to gh-pages branch', [
     'clean',
     'sass:prod',
     'autoprefixer',
