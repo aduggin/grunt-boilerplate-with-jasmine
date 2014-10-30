@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grunt boilerplate</title>
+    <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+<h1>Grunt boilerplate</h1>
+
+<p>goblin is called: <span id="goblin-said"></span>.</p>
+
+<p>myplugin should turn this text red.</p>
+
+
+<script src="vendor/js/jquery.js"></script>
+<script src="js/myplugin.js"></script>
+<script src="js/goblin.js"></script>
+
+<script>
+    var goblin = new Goblin('Dakka');
+    document.getElementById('goblin-said').innerHTML = goblin.name;
+
+    $(function(){
+        console.log('run');
+        $('h1').myplugin();
+    });
+</script>
+
+</body>
+</html>
