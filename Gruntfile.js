@@ -37,7 +37,7 @@ module.exports = function (grunt) {
         'app/js/**/*.js',
         '!app/js/vendor/**/*.js',
         'test/**/*.js',
-        '!test/lib/*.js',
+        '!test/lib/*.js'
       ]
     },
 
@@ -127,7 +127,7 @@ module.exports = function (grunt) {
           'Gruntfile.js',
           'app/js/**/*.js',
           '!app/js/vendor/**/*.js',
-          'test/**/*.js',
+          'test/**/*.js'
         ],
         tasks: ['jshint', 'jasmine:shell'],
         options: {
