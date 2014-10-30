@@ -7,9 +7,10 @@
 <body>
 <h1>Grunt boilerplate</h1>
 
-<p>display property from an object: <span id="goblin-said"></span>.</p>
-
-<p>myplugin should turn this text red.</p>
+<ol>
+    <li>Display the property of a Goblin object: <span id="goblin-said"></span>.</li>
+    <li id="myplugin-target">Change the colour of this text from black to red - using myplugin.</li>
+</ol>
 
 
 <script src="vendor/js/jquery.js"></script>
@@ -22,7 +23,7 @@
 
     $(function(){
         console.log('run');
-        $('h1').myplugin();
+        $('#myplugin-target').myplugin();
     });
 </script>
 
