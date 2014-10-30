@@ -5,10 +5,9 @@ A bare bones project with a grunt build process that gets you up and running wit
 * Sass
 * autoprefixer
 * CSSLint
-* JSHint - enforcing the airB&b styleguide
-* Jasmine units (including jasmine-jquery) will enables testing user interface javascript in a headless browser from the command line and/or in a real browser
-* livereload
-* deploying files to guthub pages
+* JSHint - enforcing the Airbnb JavaScript Style Guide
+* Jasmine unit tests (including jasmine-jquery) in a headless browser from the command line and/or in a real browser
+* Generating production files and deploying files to GitHub Pages
 
 
 Start by install node modules:
