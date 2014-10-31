@@ -5,4 +5,5 @@
     this.addClass('is-selected');
     return this;
   };
+  
 })(jQuery);
