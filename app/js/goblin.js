@@ -9,6 +9,10 @@
     console.log('Waaagh!');
   };
 
+  Goblin.prototype.boo = function () {
+    console.log('Boo!');
+  };
+
   global.Goblin = Goblin;
 
 }(this);
