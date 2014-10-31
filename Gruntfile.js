@@ -193,6 +193,9 @@ module.exports = function (grunt) {
     'jasmine'
   ]);
 
+  grunt.registerTask('travis', [
+    'test'
+  ]);
 
   grunt.registerTask('test:browser', 'Run tests in a browser', [
     'csslint',

@@ -1,6 +1,6 @@
 {
-  "name": "grunt-boilerplate",
-  "version": "0.0.0",
+  "name": "grunt-boilerplate-with-jasmine",
+  "version": "0.0.1",
   "devDependencies": {
     "grunt": "~0.4.2",
     "matchdep": "~0.3.0",
@@ -17,5 +17,8 @@
     "grunt-contrib-csslint": "~0.2.0",
     "grunt-autoprefixer": "~0.6.5",
     "jshint-stylish": "~0.1.5"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
   }
 }
