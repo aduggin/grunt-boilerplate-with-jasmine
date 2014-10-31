@@ -22,6 +22,7 @@
     "grunt-coveralls": "^1.0.0"
   },
   "scripts": {
-    "test": "grunt travis --verbose"
+    "test": "grunt travis --verbose",
+    "coveralls": "grunt coveralls --verbose"
   }
 }
