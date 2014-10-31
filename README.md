@@ -10,7 +10,7 @@ A bare bones project with a grunt build process that gets you up and running wit
 * Generating production files and deploying files to GitHub Pages
 
 
-Start by install node modules:
+Start by installing the required node modules:
 `npm install`
 
 You can then run the following tasks:
@@ -21,5 +21,8 @@ You can then run the following tasks:
 * `grunt release` - Generate files, runs tests, build to dist and copy files to gh-pages branch
 * `grunt clean` - Delete all generated and temporary files
 * `grunt version` - Shows version number
+
+The generated production files are visible on Github Pages at [http://aduggin.github.io/grunt-boilerplate/](http://aduggin.github.io/grunt-boilerplate/)
+
 
 
