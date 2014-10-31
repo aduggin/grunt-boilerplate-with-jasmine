@@ -25,5 +25,4 @@ You can then run the following tasks:
 The generated production files are visible on Github Pages at
 [http://aduggin.github.io/grunt-boilerplate-with-jasmine/](http://aduggin.github.io/grunt-boilerplate-with-jasmine/)
 
-
-
+CSSLint, JSHint and the Jasmine Unit Tests are run on Travis CI
