@@ -23,6 +23,6 @@
   },
   "scripts": {
     "test": "grunt travis --verbose",
-    "coveralls": "grunt coveralls --verbose"
+    "coveralls": "grunt coveralls:grunt_coveralls_real_coverage --verbose"
   }
 }

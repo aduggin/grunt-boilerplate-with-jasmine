@@ -129,9 +129,8 @@ module.exports = function (grunt) {
       }
     },
     coveralls: {
-      options: {
-        src: 'reports/coverage/lcov.info',
-        force: true
+      grunt_coveralls_real_coverage: {
+        src: 'reports/coverage/lcov.info'
       }
     },
     watch: {
