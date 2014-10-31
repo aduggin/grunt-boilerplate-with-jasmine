@@ -1,5 +1,7 @@
 #Grunt boilerplate with Jasmine
 
+[![Build Status](https://travis-ci.org/aduggin/grunt-boilerplate-with-jasmine.svg?branch=master)](https://travis-ci.org/aduggin/grunt-boilerplate-with-jasmine)
+
 A bare bones project with a grunt build process that gets you up and running with:
 
 * Sass
