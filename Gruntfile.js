@@ -161,7 +161,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'app',
             dest: 'dist',
-            src: ['*.html', 'js/**/*', 'vendor/js/**/*']
+            src: ['README.md', '*.html', 'js/**/*', 'vendor/js/**/*']
           },
           {
             expand: true,
