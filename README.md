@@ -1,4 +1,4 @@
-#Grunt Boilerplate
+#Grunt boilerplate with Jasmine
 
 A bare bones project with a grunt build process that gets you up and running with:
 
@@ -22,7 +22,8 @@ You can then run the following tasks:
 * `grunt clean` - Delete all generated and temporary files
 * `grunt version` - Shows version number
 
-The generated production files are visible on Github Pages at [http://aduggin.github.io/grunt-boilerplate/](http://aduggin.github.io/grunt-boilerplate/)
+The generated production files are visible on Github Pages at
+[http://aduggin.github.io/grunt-boilerplate-with-jasmine/](http://aduggin.github.io/grunt-boilerplate-with-jasmine/)
 
 
 
