@@ -9,14 +9,6 @@
     console.log('Waaagh!');
   };
 
-  Goblin.prototype.boo = function () {
-    console.log('Boo!');
-  };
-
-  Goblin.prototype.laugh = function () {
-    console.log('Tee hee hee!');
-  };
-
   global.Goblin = Goblin;
 
 }(this);
