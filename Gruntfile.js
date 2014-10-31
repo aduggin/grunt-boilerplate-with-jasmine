@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
   // Load Grunt tasks declared in the package.json file
   require('load-grunt-tasks')(grunt, {
-    pattern: ['grunt-*']
+    pattern: ['grunt-*', '!grunt-template-jasmine-istanbul']
   });
 
   // Configure Grunt
@@ -93,15 +93,45 @@ module.exports = function (grunt) {
       }
     },
     jasmine: {
-      dev: {
-        src: ['app/js/**/*.js']
+      run: {
+        src: ['app/js/**/*.js'],
+        options: {
+          vendor: [
+            'app/vendor/js/jquery.js',
+            'test/lib/jasmine-jquery.js'],
+          specs: ['test/spec/*_spec.js'],
+          outfile: 'test/index.html'
+        }
       },
+      coverage: {
+        src: ['app/js/**/*.js'],
+        options: {
+          vendor: [
+            'app/vendor/js/jquery.js',
+            'test/lib/jasmine-jquery.js'],
+          specs: ['test/spec/*_spec.js'],
+          template: require('grunt-template-jasmine-istanbul'),
+          templateOptions: {
+            coverage: 'reports/coverage/coverage.json',
+            report: [
+              {
+                type: 'lcov',
+                options: {
+                  dir: 'reports/coverage'
+                }
+              },
+              {
+                type: 'text-summary'
+              }
+            ]
+          }
+        }
+      }
+    },
+    coveralls: {
       options: {
-        vendor: [
-          'app/vendor/js/jquery.js',
-          'test/lib/jasmine-jquery.js'],
-        specs: ['test/spec/*_spec.js'],
-        outfile: 'test/index.html'
+        src: 'reports/coverage/lcov.info',
+        force: true
       }
     },
     watch: {
@@ -190,7 +220,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', 'Run tests in the console', [
     'csslint',
     'jshint',
-    'jasmine'
+    'jasmine:run'
   ]);
 
   grunt.registerTask('travis', [
@@ -200,7 +230,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test:browser', 'Run tests in a browser', [
     'csslint',
     'jshint',
-    'jasmine:dev:build',
+    'jasmine:run:build',
     'connect:test',
     'open:test',
     'watch'

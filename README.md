@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/aduggin/grunt-boilerplate-with-jasmine.svg?branch=master)](https://travis-ci.org/aduggin/grunt-boilerplate-with-jasmine)
 
+[![Coverage Status](https://img.shields.io/coveralls/aduggin/grunt-boilerplate-with-jasmine.svg)](https://coveralls.io/r/aduggin/grunt-boilerplate-with-jasmine)
+
 A bare bones project with a grunt build process that gets you up and running with:
 
 * Sass
