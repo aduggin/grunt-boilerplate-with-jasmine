@@ -11,15 +11,15 @@ A bare bones project with a grunt build process that gets you up and running wit
 
 
 Start by install node modules:
-    npm install
+`npm install`
 
 You can then run the following tasks:
 
-grunt server - Start a server and live reload and run tests when files change
-grunt test - Run tests in the console
-grunt test:browser - Run tests in a browser
-grunt release - Generate files, runs tests, build to dist and copy files to gh-pages branch
-grunt clean - Delete all generated and temporary files
-grunt version - Shows version number
+* `grunt server` - Start a server and run tests when files change
+* `grunt test` - Run tests in the console
+* `grunt test:browser` - Run tests in a browser
+* `grunt release` - Generate files, runs tests, build to dist and copy files to gh-pages branch
+* `grunt clean` - Delete all generated and temporary files
+* `grunt version` - Shows version number
 
 
