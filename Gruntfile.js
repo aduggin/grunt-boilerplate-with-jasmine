@@ -2,7 +2,9 @@ module.exports = function (grunt) {
   'use strict';
 
   // Load Grunt tasks declared in the package.json file
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  require('load-grunt-tasks')(grunt, {
+    pattern: ['grunt-*']
+  });
 
   // Configure Grunt
   var sassFiles = [

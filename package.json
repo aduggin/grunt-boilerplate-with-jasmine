@@ -16,7 +16,9 @@
     "grunt-build-gh-pages": "~0.1.7",
     "grunt-contrib-csslint": "~0.2.0",
     "grunt-autoprefixer": "~0.6.5",
-    "jshint-stylish": "~0.1.5"
+    "grunt-template-jasmine-istanbul": "~0.2.5",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "^1.0.0"
   },
   "scripts": {
     "test": "grunt travis --verbose"
