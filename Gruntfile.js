@@ -92,20 +92,18 @@ module.exports = function (grunt) {
         }
       }
     },
-
     jasmine: {
-      shell: {
-        options: {
-          vendor: [
-            'app/vendor/js/jquery.js',
-            'test/lib/jasmine-jquery.js'],
-          specs: ['test/spec/*_spec.js'],
-          outfile: 'test/index.html'
-        },
+      dev: {
         src: ['app/js/**/*.js']
+      },
+      options: {
+        vendor: [
+          'app/vendor/js/jquery.js',
+          'test/lib/jasmine-jquery.js'],
+        specs: ['test/spec/*_spec.js'],
+        outfile: 'test/index.html'
       }
     },
-
     watch: {
       html: {
         files: ['app/index.html'],
@@ -202,7 +200,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test:browser', 'Run tests in a browser', [
     'csslint',
     'jshint',
-    'jasmine:shell:build',
+    'jasmine:dev:build',
     'connect:test',
     'open:test',
     'watch'
