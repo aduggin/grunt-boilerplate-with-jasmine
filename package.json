@@ -22,8 +22,6 @@
     "grunt-coveralls": "^1.0.0"
   },
   "scripts": {
-    "test": "grunt travis --verbose",
-    "coverage": "grunt jasmine:coverage --force",
-    "coveralls": "grunt coveralls:grunt_coveralls_real_coverage --verbose"
+    "test": "grunt travis --verbose"
   }
 }

@@ -4,5 +4,5 @@ node_js:
 before_install:
   - npm install -g grunt-cli
 after_success:
-  - npm run-script coverage
-  - npm run-script coveralls
+  - grunt jasmine:coverage --force
+  - grunt coveralls:grunt_coveralls_real_coverage --verbose
