@@ -6,3 +6,4 @@ before_install:
 after_success:
   - grunt jasmine:coverage --force
   - grunt coveralls:grunt_coveralls_real_coverage --verbose
+  - grunt release
