@@ -19,7 +19,9 @@
     "grunt-template-jasmine-istanbul": "^0.3.1",
     "jshint-stylish": "^1.0.0",
     "load-grunt-tasks": "^1.0.0",
-    "matchdep": "^0.3.0"
+    "matchdep": "^0.3.0",
+    "dalekjs": "0.0.8",
+    "grunt-dalek": "^0.2.0"
   },
   "scripts": {
     "test": "grunt travis --verbose"

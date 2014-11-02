@@ -133,6 +133,13 @@ module.exports = function (grunt) {
         src: 'reports/coverage/lcov.info'
       }
     },
+    
+    dalek: {
+      dist: {
+        src: ['test/smoketests.js']
+      }
+    },
+
     watch: {
       html: {
         files: ['app/index.html'],
@@ -224,6 +231,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('travis', [
     'test'
+  ]);
+
+  grunt.registerTask('test2', [
+    'connect:server',
+    'open:server',
+    'dalek'
   ]);
 
   grunt.registerTask('test:browser', 'Run tests in a browser', [
