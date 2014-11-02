@@ -50,7 +50,7 @@
   "maxlen": 120,
 
   // Enforce placing 'use strict' at the top function scope
-  "strict": true,
+  "strict": false,
 
   "expr": true,
 
