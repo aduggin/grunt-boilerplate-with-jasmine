@@ -239,7 +239,7 @@ module.exports = function (grunt) {
     'test'
   ]);
 
-  grunt.registerTask('test2', [
+  grunt.registerTask('smoketests', [
     'connect:server',
     'open:server',
     'dalek'
