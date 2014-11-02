@@ -133,7 +133,13 @@ module.exports = function (grunt) {
         src: 'reports/coverage/lcov.info'
       }
     },
-    
+    plato: {
+      all: {
+        files: {
+          'reports/plato': ['app/js/**/*.js']
+        }
+      }
+    },
     dalek: {
       dist: {
         src: ['test/smoketests.js']
