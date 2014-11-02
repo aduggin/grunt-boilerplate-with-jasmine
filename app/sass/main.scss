@@ -1,4 +1,6 @@
-$color-selected: #ff0000;
+@import "lib/variables";
+@import "base/normalize";
+
 
 .is-selected {
   color:$color-selected;
