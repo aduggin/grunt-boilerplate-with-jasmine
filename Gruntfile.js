@@ -214,9 +214,19 @@ module.exports = function (grunt) {
         ]
       }
     },
-
     build_gh_pages: {
       gh_pages: {}
+    },
+    tenon: {
+      options: {
+        apiKey: "3786b3b4504cc501066c48285f80fcd3",
+        timeout: 240000,
+        urls: [
+          'http://aduggin.github.io/grunt-boilerplate-with-jasmine/'
+        ]
+      },
+      local: {
+      }
     }
   });
 
@@ -243,6 +253,10 @@ module.exports = function (grunt) {
     'connect:server',
     'open:server',
     'dalek'
+  ]);
+
+  grunt.registerTask('accessibility', [
+    'tenon'
   ]);
 
   grunt.registerTask('test:browser', 'Run tests in a browser', [
