@@ -22,7 +22,10 @@
     "matchdep": "^0.3.0",
     "grunt-dalek": "^0.2.0",
     "grunt-plato": "^1.3.0",
-    "grunt-tenon": "0.0.4"
+    "grunt-tenon": "0.0.4",
+    "karma": "^0.12.24",
+    "karma-jasmine": "^0.2.3",
+    "karma-phantomjs-launcher": "^0.1.4"
   },
   "scripts": {
     "test": "grunt travis --verbose"
