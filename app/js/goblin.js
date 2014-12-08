@@ -1,4 +1,4 @@
-!function(global) {
+(function(global) {
   'use strict';
 
   function Goblin(name) {
@@ -11,7 +11,7 @@
 
   global.Goblin = Goblin;
 
-}(this);
+})(this);
 
 
 
