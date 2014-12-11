@@ -16,6 +16,10 @@
       interestRate = this.interestRate/100,
       years = 0;
 
+    if (annualWithdrawl < (pensionPot * interestRate)) {
+      return 'Forever';
+    }
+
     while (pensionPot > annualWithdrawl) {
       pensionPot = (pensionPot - annualWithdrawl) * (1 + interestRate);
       years++;
