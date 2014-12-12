@@ -171,7 +171,7 @@ module.exports = function (grunt) {
           '!app/js/vendor/**/*.js',
           'test/**/*.js'
         ],
-        tasks: ['jshint', 'jasmine:shell'],
+        tasks: ['jshint', 'jasmine:run'],
         options: {
           livereload: true
         }
