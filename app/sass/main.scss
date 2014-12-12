@@ -1,7 +1,10 @@
 @import "lib/variables";
-@import "../vendor/css/normalize";
+@import "base/base";
 
 
+.form-group {
+  margin-bottom: 1em;
+}
 .is-selected {
   color:$color-selected;
 }
