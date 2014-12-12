@@ -1,10 +1,9 @@
-beforeEach(function () {
-  'use strict';
-  loadFixtures('myfixture.html');
-});
-
 describe('myplugin', function () {
   'use strict';
+
+  beforeEach(function () {
+    loadFixtures('myfixture.html');
+  });
 
   it('adds an "is-selected" class', function () {
     $('#my-fixture').myplugin();
