@@ -27,28 +27,19 @@ describe('controller', function () {
   });
 
 
-  describe('getInitialValue()', function () {
-    it('returns the value of the "Initial value" field', function () {
-      $(view.initialValue).val('20000');
+  describe('getFormData()', function () {
+    it('extracts values from the form and returns them as an object', function () {
+      $(view.initialValue).val('80000');
+      $(view.years).val('3');
+      $(view.annualDeposit).val('7200');
 
-      expect(controller.getInitialValue()).toEqual('20000');
+      var expectedFormData = {
+        initialValue: '80000',
+        years: '3',
+        annualDeposit: '7200'
+      };
+
+      expect(controller.getFormData()).toEqual(expectedFormData);
     });
   });
-
-  describe('getYears()', function () {
-    it('returns the value of the "years" field', function () {
-      $(view.years).val('5');
-
-      expect(controller.getYears()).toEqual('5');
-    });
-  });
-
-  describe('getAnnualDeposit()', function () {
-    it('returns the value of the "annual deposit" field', function () {
-      $(view.annualDeposit).val('5200');
-
-      expect(controller.getAnnualDeposit()).toEqual('5200');
-    });
-  });
-
 });

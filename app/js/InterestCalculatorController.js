@@ -23,18 +23,16 @@
     console.log(self.getInitialValue());
   };
 
-  proto.getInitialValue = function () {
-    return this.$container.find(this.$initialValue).val();
+  proto.getFormData = function () {
+    var formData = {
+      initialValue:   this.$container.find(this.$initialValue).val(),
+      years:          this.$container.find(this.$years).val(),
+      annualDeposit:  this.$container.find(this.$annualDeposit).val()
+    };
+
+    return formData;
   };
 
-  proto.getYears = function () {
-    return this.$container.find(this.$years).val();
-  };
-
-  proto.getAnnualDeposit = function () {
-    return this.$container.find(this.$annualDeposit).val();
-  };
-  
   global.InterestCalculatorController = InterestCalculatorController;
 
 })(this);
