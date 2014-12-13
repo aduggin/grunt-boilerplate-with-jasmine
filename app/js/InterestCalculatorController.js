@@ -1,7 +1,7 @@
 (function(global) {
   'use strict';
 
-  var proto;
+  var proto, self;
 
   function InterestCalculatorController(view) {
     this.$container = $(view.container);
@@ -9,6 +9,8 @@
     this.$years = $(view.years);
     this.$annualDeposit = $(view.annualDeposit);
     this.$submit = $(view.submit);
+
+    self = this;
   }
 
   proto = InterestCalculatorController.prototype;
@@ -17,8 +19,8 @@
     this.$container.find(this.$submit ).on('click', this.submitHandler);
   };
 
-  proto.submitHandler = function (event) {
-    console.log(event);
+  proto.submitHandler = function () {
+    console.log(self.getInitialValue());
   };
 
   proto.getInitialValue = function () {
@@ -32,8 +34,7 @@
   proto.getAnnualDeposit = function () {
     return this.$container.find(this.$annualDeposit).val();
   };
-
-
+  
   global.InterestCalculatorController = InterestCalculatorController;
 
 })(this);
