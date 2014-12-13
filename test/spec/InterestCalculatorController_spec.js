@@ -42,4 +42,15 @@ describe('controller', function () {
       expect(controller.getFormData()).toEqual(expectedFormData);
     });
   });
+
+  describe('getCalculationsFromModel()', function () {
+    it('gets the growthValue and interest from the model as an object', function () {
+      var expectedModelData = {
+        growthValue: 116443,
+        interest: 36443
+      };
+
+      expect(controller.getCalculationsFromModel()).toEqual(expectedModelData);
+    });
+  });
 });

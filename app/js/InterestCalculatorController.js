@@ -1,3 +1,5 @@
+/*globals InterestCalculatorModel:false*/
+
 (function(global) {
   'use strict';
 
@@ -31,6 +33,16 @@
     };
 
     return formData;
+  };
+
+  proto.getCalculationsFromModel = function() {
+    var model = new InterestCalculatorModel(80000, 3, 7200);
+    var modelData = {
+      growthValue: model.growthValue(),
+      interest: model.interest()
+    };
+
+    return modelData;
   };
 
   global.InterestCalculatorController = InterestCalculatorController;
