@@ -48,7 +48,13 @@
     $(function(){
         $('#myplugin-target').myplugin();
 
-        var controller = new InterestCalculatorController('#interest-calculator');
+        var controller = new InterestCalculatorController({
+            container: '#interest-calculator',
+            initialValue: '#initial-value',
+            years: '#years',
+            annualDeposit: '#payment',
+            submit: 'input[type=submit]'
+        });
         controller.init();
     });
 </script>
