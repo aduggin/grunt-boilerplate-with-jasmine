@@ -3,12 +3,43 @@
 describe('InterestCalculatorModel', function () {
   'use strict';
 
-  var calc = new InterestCalculatorModel(18000, 1);
-  var calc2 = new InterestCalculatorModel(80000, 3);
-  var calc3 = new InterestCalculatorModel(2000000, 7);
-  var calc4 = new InterestCalculatorModel(18000, 1, 1200);
-  var calc5 = new InterestCalculatorModel(80000, 3, 7200);
-  var calc6 = new InterestCalculatorModel(2000000, 7, 60000);
+  var calc, calc2, calc3, calc4, calc5, calc6;
+  var config = {
+    initialValue: 18000,
+    years: 1
+  };
+  var config2 = {
+    initialValue: 80000,
+    years: 3
+  };
+  var config3 = {
+    initialValue: 2000000,
+    years: 7
+  };
+  var config4 = {
+    initialValue: 18000,
+    years: 1,
+    annualDeposit: 1200
+  };
+  var config5 = {
+    initialValue: 80000,
+    years: 3,
+    annualDeposit: 7200
+  };
+  var config6 = {
+    initialValue: 2000000,
+    years: 7,
+    annualDeposit: 60000
+  };
+
+  beforeEach(function () {
+    calc = new InterestCalculatorModel(config);
+    calc2 = new InterestCalculatorModel(config2);
+    calc3 = new InterestCalculatorModel(config3);
+    calc4 = new InterestCalculatorModel(config4);
+    calc5 = new InterestCalculatorModel(config5);
+    calc6 = new InterestCalculatorModel(config6);
+  });
 
   describe('growthValue()', function () {
     it('returns the growth value including all interest', function () {
@@ -29,6 +60,17 @@ describe('InterestCalculatorModel', function () {
       expect(calc4.interest()).toEqual(2160);
       expect(calc5.interest()).toEqual(36443);
       expect(calc6.interest()).toEqual(1327147);
+    });
+  });
+
+  describe('getData()', function () {
+    it('returns an object of calculations', function () {
+      var expectedData = {
+        growthValue: 116443,
+        interest: 36443
+      };
+
+      expect(calc5.getData()).toEqual(expectedData);
     });
   });
 

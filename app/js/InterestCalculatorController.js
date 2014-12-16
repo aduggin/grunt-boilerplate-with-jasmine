@@ -22,7 +22,7 @@
   };
 
   proto.submitHandler = function () {
-    console.log(self.getInitialValue());
+    console.log(self.getFormData());
   };
 
   proto.getFormData = function () {
@@ -35,14 +35,10 @@
     return formData;
   };
 
-  proto.getCalculationsFromModel = function() {
-    var model = new InterestCalculatorModel(80000, 3, 7200);
-    var modelData = {
-      growthValue: model.growthValue(),
-      interest: model.interest()
-    };
+  proto.getCalculationsFromModel = function(formData) {
+    var model = new InterestCalculatorModel(formData);
 
-    return modelData;
+    return model.getData();
   };
 
   global.InterestCalculatorController = InterestCalculatorController;

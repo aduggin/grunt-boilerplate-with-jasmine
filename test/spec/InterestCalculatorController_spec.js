@@ -45,12 +45,19 @@ describe('controller', function () {
 
   describe('getCalculationsFromModel()', function () {
     it('gets the growthValue and interest from the model as an object', function () {
+      var formData = {
+        initialValue: 80000,
+        years: 3,
+        annualDeposit: 7200
+      };
+
       var expectedModelData = {
         growthValue: 116443,
         interest: 36443
       };
 
-      expect(controller.getCalculationsFromModel()).toEqual(expectedModelData);
+
+      expect(controller.getCalculationsFromModel(formData)).toEqual(expectedModelData);
     });
   });
 });
