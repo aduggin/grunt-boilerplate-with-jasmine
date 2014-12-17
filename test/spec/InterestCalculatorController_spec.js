@@ -34,12 +34,24 @@ describe('controller', function () {
       $(view.annualDeposit).val('7200');
 
       var expectedFormData = {
-        initialValue: '80000',
-        years: '3',
-        annualDeposit: '7200'
+        initialValue: 80000,
+        years: 3,
+        annualDeposit: 7200
       };
 
       expect(controller.getFormData()).toEqual(expectedFormData);
+    });
+
+    describe('when form fields are empty', function () {
+      it('returns object values as 0', function () {
+        var expectedFormData = {
+          initialValue: 0,
+          years: 0,
+          annualDeposit: 0
+        };
+
+        expect(controller.getFormData()).toEqual(expectedFormData);
+      });
     });
   });
 

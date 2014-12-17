@@ -26,10 +26,14 @@
   };
 
   proto.getFormData = function () {
+    var initialValue = this.$container.find(this.$initialValue).val() || 0;
+    var years = this.$container.find(this.$years).val() || 0;
+    var annualDeposit = this.$container.find(this.$annualDeposit).val() || 0;
+
     var formData = {
-      initialValue:   this.$container.find(this.$initialValue).val(),
-      years:          this.$container.find(this.$years).val(),
-      annualDeposit:  this.$container.find(this.$annualDeposit).val()
+      initialValue:   parseInt(initialValue),
+      years:          parseInt(years),
+      annualDeposit:  parseInt(annualDeposit)
     };
 
     return formData;
