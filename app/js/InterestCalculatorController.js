@@ -22,7 +22,8 @@
   };
 
   proto.submitHandler = function () {
-    console.log(self.getFormData());
+    var formData = self.getFormData();
+    console.log(self.getCalculationsFromModel(formData));
   };
 
   proto.getFormData = function () {
